@@ -6,7 +6,7 @@ app.use(express.urlencoded({ extended: true }));
 let books = [];
 let id = 1;
 
-app.get("/health", (req, res) => {
+app.get("/", (req, res) => {
   res.status(200).send("Don't panic.");
 });
 

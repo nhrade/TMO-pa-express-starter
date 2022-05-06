@@ -27,7 +27,7 @@ app.get("/api/books", (req, res) => {
 });
 
 app.delete("/api/books", (req, res) => {
-  books = [];
+  books.length = 0;
   res.setHeader("content-type", "application/json");
   res.status(204).send();
 });

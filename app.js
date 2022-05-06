@@ -16,16 +16,19 @@ app.post("/api/books", (req, res) => {
   book.id = id;
   books.push(book);
   id++;
+  res.setHeader("content-type", "application/json");
   res.status(201).send(book);
 });
 
 app.get("/api/books", (req, res) => {
   books.sort((a, b) => (a.title > b.title) ? 1 : -1);
+  res.setHeader("content-type", "application/json");
   res.status(200).send(books);
 });
 
 app.delete("/api/books", (req, res) => {
   books = [];
+  res.setHeader("content-type", "application/json");
   res.status(204).send();
 });
 

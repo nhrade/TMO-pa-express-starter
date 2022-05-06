@@ -21,7 +21,7 @@ app.post("/api/books", (req, res) => {
 });
 
 app.get("/api/books", (req, res) => {
-  books = books.sort((a, b) => (a.title > b.title) ? 1 : -1);
+  books.sort((a, b) => (a.title > b.title) ? 1 : -1);
   res.setHeader("content-type", "application/json");
   res.status(200).send(books);
 });
